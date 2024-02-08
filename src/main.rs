@@ -3,7 +3,6 @@ use std::io::{stdout, Stdout, Write};
 use image::{DynamicImage, ImageBuffer, ImageOutputFormat, RgbaImage};
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-	println!("Hello, world!");
 	let mut clipboard = arboard::Clipboard::new()?;
 	let data = clipboard
 		.get_image()
