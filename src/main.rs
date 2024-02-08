@@ -26,7 +26,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 struct NewStdOut(Stdout);
 
 impl std::io::Seek for NewStdOut {
-	fn seek(&mut self, pos: std::io::SeekFrom) -> std::io::Result<u64> {
+	fn seek(&mut self, _pos: std::io::SeekFrom) -> std::io::Result<u64> {
 		return std::io::Result::Ok(0u64);
 	}
 }
